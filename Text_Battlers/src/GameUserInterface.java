@@ -48,11 +48,11 @@ public class GameUserInterface {
         archer.addAttack("PRECISE AIM", 6);
         archer.addAttack("RAPID FIRE", 9);
 		
-		heroes.add(assassin);
-		heroes.add(paladin);
-		heroes.add(mage);
-		heroes.add(knight);
-		heroes.add(archer);
+	heroes.add(assassin);
+	heroes.add(paladin);
+	heroes.add(mage);
+	heroes.add(knight);
+	heroes.add(archer);
 		
 		// Initialize the monsters list
         monsters = new ArrayList<>();
@@ -64,9 +64,9 @@ public class GameUserInterface {
         Monster dragon = new Monster("DRAGON", 20, 240, 450);
         
         goblin.addAttack("CLUB BASH", 8);
-		goblin.addAttack("BITE", 5);
-		goblin.addAttack("CRUSHING BLOW", 10);
-		goblin.addAttack("GALE SWIPE", 7);
+	goblin.addAttack("BITE", 5);
+	goblin.addAttack("CRUSHING BLOW", 10);
+	goblin.addAttack("GALE SWIPE", 7);
         
         skeleton.addAttack("RUSTY STRIKE", 12);
         skeleton.addAttack("SHIELD BASH", 6);
@@ -74,32 +74,32 @@ public class GameUserInterface {
         skeleton.addAttack("BONE SHATTER", 8);
         
         orc.addAttack("BRUTE SMASH", 16);
-		orc.addAttack("CHARGE", 11);
-		orc.addAttack("WILD SWING", 14);
-		orc.addAttack("STOMP", 10);
+	orc.addAttack("CHARGE", 11);
+	orc.addAttack("WILD SWING", 14);
+	orc.addAttack("STOMP", 10);
 		
-		chimera.addAttack("FLAMING BREATH", 20);
-		chimera.addAttack("VENOMOUS TAIL STRIKE", 13);
-		chimera.addAttack("POISONOUS BREATH", 18);
-		chimera.addAttack("WING SLASH", 15);
+	chimera.addAttack("FLAMING BREATH", 20);
+	chimera.addAttack("VENOMOUS TAIL STRIKE", 13);
+	chimera.addAttack("POISONOUS BREATH", 18);
+	chimera.addAttack("WING SLASH", 15);
 		
-		dragon.addAttack("SEARING INFERNO", 30);
-		dragon.addAttack("THUNDERING ROAR	", 25);
-		dragon.addAttack("FLAME WAVE", 35);
-		dragon.addAttack("TAIL SWEEP", 28);
+	dragon.addAttack("SEARING INFERNO", 30);
+	dragon.addAttack("THUNDERING ROAR	", 25);
+	dragon.addAttack("FLAME WAVE", 35);
+	dragon.addAttack("TAIL SWEEP", 28);
 		
-		monsters.add(goblin);
-		monsters.add(skeleton);
-		monsters.add(orc);
-		monsters.add(chimera);
-		monsters.add(dragon);
+	monsters.add(goblin);
+	monsters.add(skeleton);
+	monsters.add(orc);
+	monsters.add(chimera);
+	monsters.add(dragon);
     }
 	
 	public void displayWelcomeMessage() {
 		System.out.println("********************************************************************");
-        System.out.println("\n                        WELCOME TO TEXT BATTLERS                  ");
-        System.out.println("          TEXT BATTLERS IS A TEXT-BASED TURNED BASED BATTLER      \n");     
-        System.out.println("********************************************************************");
+	        System.out.println("\n                        WELCOME TO TEXT BATTLERS                  ");
+	        System.out.println("          TEXT BATTLERS IS A TEXT-BASED TURNED BASED BATTLER      \n");     
+	        System.out.println("********************************************************************");
 	}
 	
 	int heroSelcetionNum;
