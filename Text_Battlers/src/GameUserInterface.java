@@ -54,7 +54,7 @@ public class GameUserInterface {
 	heroes.add(knight);
 	heroes.add(archer);
 		
-		// Initialize the monsters list
+	// Initialize the monsters list
         monsters = new ArrayList<>();
         
         Monster goblin = new Monster("GOBLIN", 5, 60, 90);
@@ -152,9 +152,9 @@ public class GameUserInterface {
 	int battleOptionNum;
 	
 	public void displayBattle(int optionNum) {
-		Monster selectedMonster = getMonster(optionNum);
-		System.out.println("\n********************************************************************"); 
-		System.out.println("                                 " + selectedMonster.getCharacterName());
+	Monster selectedMonster = getMonster(optionNum);
+	System.out.println("\n********************************************************************"); 
+	System.out.println("                                 " + selectedMonster.getCharacterName());
 	    System.out.println("                                 HP: " + selectedMonster.getCharacterHealth());
 	    System.out.println("\n\n                               " + selectedHero.getCharacterName());
 	    System.out.println("                                HP: " + selectedHero.getCharacterHealth() + "\n");
@@ -172,33 +172,33 @@ public class GameUserInterface {
 	public void displayFight(int optionNum) {
 		Monster selectedMonster = getMonster(optionNum);
 	    
-	    while(selectedMonster.getCharacterHealth() >= 1 || selectedHero.getCharacterHealth() >= 1) {
-	    	System.out.println("\n********************************************************************");
+                while(selectedMonster.getCharacterHealth() >= 1 || selectedHero.getCharacterHealth() >= 1) {
+		        System.out.println("\n********************************************************************");
 			System.out.println("\n                                " + selectedMonster.getCharacterName());
-		    System.out.println("                                HP: " + selectedMonster.getCharacterHealth());
-		    System.out.println("\n\n                               " + selectedHero.getCharacterName());
-		    System.out.println("                                HP: " + selectedHero.getCharacterHealth() + "\n");
+		        System.out.println("                                HP: " + selectedMonster.getCharacterHealth());
+			System.out.println("\n\n                               " + selectedHero.getCharacterName());
+			System.out.println("                                HP: " + selectedHero.getCharacterHealth() + "\n");
+			    
+			Map<String, Integer> heroAttacks = selectedHero.getAttack();
+			for (Map.Entry<String, Integer> entry : heroAttacks.entrySet()) {
+				System.out.printf("\t\t\t\t%-15s %d\n", entry.getKey(), entry.getValue());
+			}
+			    
+			System.out.println("\n********************************************************************");
+			    
+			System.out.print("\nSELECT MOVE: ");
+			int moveOptionNum = in.nextInt();
+			    
+			System.out.println("\n> " + selectedHero.getCharacterName() + " USED ");
+			    
+			System.out.println("\n> " + selectedMonster.getCharacterName() + " USED ");
+			    
+			battleLogic(moveOptionNum, selectedMonster);
+			monsterBattleLogic(selectedHero);
+			    
+			displayBattle(monsterSelcetionNum);
 		    
-		    Map<String, Integer> heroAttacks = selectedHero.getAttack();
-		    for (Map.Entry<String, Integer> entry : heroAttacks.entrySet()) {
-		        System.out.printf("\t\t\t\t%-15s %d\n", entry.getKey(), entry.getValue());
-		    }
-		    
-		    System.out.println("\n********************************************************************");
-		    
-		    System.out.print("\nSELECT MOVE: ");
-		    int moveOptionNum = in.nextInt();
-		    
-		    System.out.println("\n> " + selectedHero.getCharacterName() + " USED ");
-		    
-		    System.out.println("\n> " + selectedMonster.getCharacterName() + " USED ");
-		    
-		    battleLogic(moveOptionNum, selectedMonster);
-		    monsterBattleLogic(selectedHero);
-		    
-		    displayBattle(monsterSelcetionNum);
-		    
-	    }
+	    	}
 	}
 	
 	public void battleLogic(int moveOptionNum, Monster selectedMonster) {
